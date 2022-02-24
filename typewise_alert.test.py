@@ -1,6 +1,6 @@
 import unittest
 import typewise_alert
-import notificationTest
+from notificationTest import* 
 
 class TypewiseTest(unittest.TestCase):
   def test_check_and_alert(self):
