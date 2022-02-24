@@ -22,6 +22,3 @@ class NotificationTest(unittest.TestCase):
         breachType = 'TOO_HIGH'
         result = Notifier.send_notification(alertTarget, breachType)
         self.assertTrue(result == 1)
-
-if __name__ == '__main__':
-  unittest.main()
