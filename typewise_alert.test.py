@@ -7,12 +7,12 @@ class TypewiseTest(unittest.TestCase):
     status = typewise_alert.check_and_alert('TO_EMAIL', batteryChar, 36)
     self.assertTrue(status == 1)
     
-    batteryChar = {'coolingType': 'PASSIVE_COOLING'}
-    status = typewise_alert.check_and_alert('TO_EMAIL', batteryChar, -36)
+    batteryChar = {'coolingType': 'HI_ACTIVE_COOLING'}
+    status = typewise_alert.check_and_alert('TO_EMAIL', batteryChar, -1)
     self.assertTrue(status == 1)
     
-    batteryChar = {'coolingType': 'PASSIVE_COOLING'}
-    status = typewise_alert.check_and_alert('TO_EMAIL', batteryChar, 25)
+    batteryChar = {'coolingType': 'MED_ACTIVE_COOLING'}
+    status = typewise_alert.check_and_alert('TO_CONTROLLER', batteryChar, 0)
     self.assertTrue(status == 1)
 
 if __name__ == '__main__':
